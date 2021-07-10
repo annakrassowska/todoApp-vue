@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
+		 <!-- FONT AWESOME ICON -->
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+		<!-- GOOGLE FONTS-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+		<title>Testowa strona</title>
+		<link rel="stylesheet" href="css.7a72f49e.css">
+	</head>
+	<body>
+		<div id="app">
+			<main id="main" class="main">
+				<h1>Anna's list todo</h1>
+				<form v-on:submit.prevent="">
+					<input type="text" v-model="todoName" placeholder="Wpisz zadanie" v-on:keyup.enter="addProduct">
+				</form>
+				<button class="btn1" @click="addProduct"> 
+					<p>DODAJ</p>
+				</button>
+				<span>{{todoName}}</span>
+				<p></p>
+				<p v-if="todos.active">alamakota</p>	
+				<ul v-for="(todo,index) in todos">
+					<div class="item-todo">
+						<li>{{todo.name}}</li>							
+						<button class="trash-btn" @click="removeProduct(index)"> <i class="fas fa-trash"> <i></i></i></button>
+						<button class="complete-btn" type="complete-btn" @click="checkProduct(index)"> <i class="fas fa-check"><i></i></i></button>
+					<div>					
+				</div></div></ul>
+				
+			</main>
+		</div>
+		<script src="js.f2486212.js"></script>
+	</body>
+</html>
